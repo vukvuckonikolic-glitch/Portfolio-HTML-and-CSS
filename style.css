@@ -1,0 +1,861 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+html{
+    font-size: 62.5%;
+}
+
+:root{
+--text-color:#6ed8d4;
+--text-color2:white;
+--primary-color:white;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color2);
+}
+header{
+background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D"http%3A//www.w3.org/2000/svg"%20viewBox%3D"0%200%201920%201080"%3E%3Cdefs%3E%3ClinearGradient%20id%3D"grad1"%20x1%3D"0%25"%20y1%3D"0%25"%20x2%3D"100%25"%20y2%3D"100%25"%3E%3Cstop%20offset%3D"0%25"%20style%3D"stop-color%3Argb%28200%2C36%2C255%29%3Bstop-opacity%3A1"%20/%3E%3Cstop%20offset%3D"100%25"%20style%3D"stop-color%3Argb%2850%2C140%2C255%29%3Bstop-opacity%3A1"%20/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpolygon%20points%3D"0%2C0%201920%2C0%201920%2C1080%200%2C1080"%20fill%3D"url%28%23grad1%29"%20/%3E%3Ccircle%20cx%3D"1500"%20cy%3D"200"%20r%3D"300"%20fill%3D"rgba%28255%2C255%2C255%2C0.1%29"%20/%3E%3Cpolygon%20points%3D"300%2C600%20100%2C900%201400%2C900"%20fill%3D"rgba%28255%2C255%2C255%2C0.15%29"%20/%3E%3Cpolygon%20points%3D"700%2C200%20100%2C700%201700%2C800"%20fill%3D"rgba%28255%2C255%2C255%2C0.25%29"%20/%3E%3Cpath%20d%3D"M0%2C500%20Q960%2C200%201920%2C500"%20stroke%3D"rgba%28255%2C255%2C255%2C0.3%29"%20stroke-width%3D"4"%20fill%3D"transparent"%20/%3E%3Cpath%20d%3D"M0%2C350%20C480%2C150%2C1440%2C150%2C1920%2C350"%20stroke%3D"rgba%28255%2C255%2C255%2C0.5%29"%20stroke-width%3D"3"%20fill%3D"transparent"%20/%3E%3Cpath%20d%3D"M0%2C800%20L960%2C100%20L1920%2C800"%20stroke%3D"rgba%28255%2C255%2C255%2C0.4%29"%20stroke-width%3D"5"%20fill%3D"transparent"%20/%3E%3Canimate%20attributeName%3D"stroke-dasharray"%20values%3D"0%2C3000%3B3000%2C0%3B0%2C3000"%20dur%3D"5s"%20keyTimes%3D"0%2C0.5%2C1"%20repeatCount%3D"indefinite"%20/%3E%3C/svg%3E');
+ background-size: cover;
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+background-size:cover;
+width: 100%;
+height: 100vh;
+background-attachment: inherit;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+  nav {
+  width: 100%;
+  height: 10vh;
+  background-color: #0a0a0a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* unutar nav-a */
+.navbar ul {
+  font-size: 3rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4rem;
+}
+
+.navbar ul li {
+  display: flex;
+}
+
+.navbar ul li a {
+  color: blueviolet;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: white;
+}
+
+/* hamburger dugme (po defaultu skriveno) */
+.hamburger {
+  display: none;
+  font-size: 4rem;
+  color:blueviolet;
+  background-color: #0a0a0a;
+  padding:0.5rem 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+}
+
+/* checkbox sakriven */
+#menu-toggle {
+  display: none;
+}
+.heder{
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.heder h1{
+    letter-spacing: 2rem;
+    font-size: 30rem;
+    font-weight: bold;
+    color: white;
+}
+.heder p{
+    letter-spacing: 2rem;
+    font-size: 20rem;
+    font-weight: bold;
+    color: white;
+}
+.info{
+    padding: 25rem
+}
+
+.heder a{
+    font-size: 15rem;
+    padding: 4rem 25rem;
+    background-color:#8A2BE2;
+    border-radius: 5rem;
+    font-weight: bold;
+    color:white;
+}
+.heder a:hover{
+    background-color: white;
+    color: blueviolet;
+}
+main{
+    height: 250vh;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+.main1{
+    background-color: #0a0a0a;
+    height: 70vh;
+    padding: 4rem;
+}
+.main1 h2{
+    letter-spacing: 2rem;
+    font-size: 20rem;
+    padding: 15rem;
+    color: white;
+}
+.main1 p{
+    font-size: 10rem;
+    font-weight: bold;
+    padding: 5rem 70rem;
+    color: white;
+}
+.main1 a{
+    padding: 15rem;
+}
+.main1 a{
+    font-size: 10rem;
+    padding:3rem 15rem;
+    background-color:blueviolet;
+    border-radius:4rem;
+    color: white;
+}
+.main1 a:hover{
+    background-color:white;
+    color:blueviolet;
+}
+.a{
+    background-color: #0a0a0a;
+    border: 1rem solid blueviolet;
+    width: 20vw;
+    height: 30vh;
+    margin: 3rem;
+    border-radius: 5rem;
+}
+
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height:100vh;
+    justify-items:center;
+    align-items:center;
+    background-color: blueviolet;
+     }
+
+ .grid-item {
+    background-color: #0a0a0a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22vw;  
+    width: 24vw;  
+    border-radius: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    margin: 0;
+
+    }
+.a{
+  
+    background-image: url(/slika1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-position: center;
+}
+.grid-item:hover{
+    transform: scale(1.1);
+}
+.n{
+    background-image: url(/slika2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.c{
+    background-image: url(/slika3.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.d{
+    background-image: url(/slika4.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.g{
+    background-image: url(/slika5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.h{
+    background-image: url(/slika6.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:center;
+}
+.l{
+    background-image: url(/slika7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    object-fit: contain;
+    }
+    .m{
+        background-image: url(/slika8.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        object-fit: contain;
+    }
+
+.main2{
+    height: 80vh;
+    background-color: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.icon1,.icon2,.icon3,.icon4{
+    color: white;
+    font-size: 7rem;
+    border:blueviolet 1px solid;
+    border-radius: 10%;
+    padding: 7rem 15rem;
+}
+.b:hover i{
+transform: scale(1.1);
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding: 30rem 0;
+   }
+.b:hover{
+    border-color:blueviolet;
+      box-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+      transform: translateY(-5px);
+      border-width: 10px;
+    box-shadow: 0 0 15px 
+}
+.naslov h2{
+    letter-spacing: 2rem;
+    font-size: 20rem;
+    color: white;
+    }
+.main2 i{
+    font-size: 50rem;
+}
+.fa-html5{
+    color:#E44D26;
+}
+.fa-css3-alt{
+    color: #1572B6;
+}
+.fa-square-js{
+    color:#F7DF1E;
+}
+ .fa-react{
+    color:#61DAFB;
+ }
+ footer{
+    height: 100vh;
+    background-color: #0a0a0a;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+ }
+
+ 
+ footer h2{
+    letter-spacing:2rem;
+    font-size: 20rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom:10rem;
+ }
+ .prijavaprva{
+    display: flex;
+    width: 25vw;
+    height: 70vh;
+    border-radius: 7rem;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding:6vh;
+}
+    
+    .prijavaprva h3{
+        font-size: 20rem;
+    }
+    .prijavaprva p{
+        font-size: 12rem;
+        color: white;
+    }
+ 
+ form{
+width: 50vw;
+height: 70vh;
+background-color:  #121212;
+border: 1rem solid blueviolet;
+border-radius: 7rem;
+box-shadow: 0 0 8px rgba(138, 43, 226,1);
+display: flex;
+flex-direction: row;
+ }
+  .prijava{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height:70vh;
+width: 25vw;
+ }
+
+.in1{
+     width: 22vw;
+     height: 7vh;
+     background-color:  #2E2E2E;
+     padding:0rem 5rem;
+     text-align: left;
+     border: 0.7rem solid blueviolet;
+     border-radius:3rem;
+    box-shadow: 0 0 8px rgba(138, 43, 226,1);
+    font-size: 8rem;
+    color:  #B0B0B0;
+    margin-bottom: 5rem;
+ }
+  .in2{
+    height: 15vh;
+    width: 22vw;
+    background-color:  #2E2E2E;
+    padding:0rem 5rem;
+    text-align: left;
+    border: 0.7rem solid blueviolet;
+    border-radius:3rem;
+    box-shadow: 0 0 8px rgba(138, 43, 226,1);
+    font-size: 8rem;
+    color:  #B0B0B0;
+    margin-bottom: 5rem;
+  }
+  form h3{
+    margin-bottom: 10rem;
+    font-size: 15rem;
+    color: white;
+  }
+  form button{
+    display: block;
+    width: 90%;
+    padding: 5rem 58rem;
+    background-color:blueviolet;
+    border-radius: 5rem;
+    font-size: 8rem;
+    color: white;
+    font-weight: bold;
+  }
+ .smernice{
+   background-color:#0a0a0a;
+   height: 20vh;
+   width: 100%;
+   display: flex;
+   flex-direction:column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+ }
+ .kontakt{
+    display: flex;
+    flex-direction: row;
+ }
+ .fa-facebook{
+    color: #1877F2;
+ }
+ .fa-instagram {
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-github {
+  color: #181717;
+}
+.fa-phone{
+    color: blueviolet;
+}
+.fa-envelope{
+    color: #D44638;
+}
+.y{
+    font-size: 20rem;
+    padding: 5rem;
+}
+.smernice h4{
+    color: white;
+    font-size: 6rem;
+}
+.kontakt i:hover{
+    transform: scale(1.2);
+}
+ footer {
+  margin-top: -1px; 
+}
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 0;
+  }
+  }
+  nav ul li a {
+    font-size: 3rem;
+  }
+  .info h1 {
+    font-size: 8rem; 
+    letter-spacing: 1.5rem;
+  }
+  .info p {
+    font-size: 3rem;
+    letter-spacing: 1.5rem;
+  }
+  .dugme{
+    margin: 3rem;
+  }
+  .heder a{
+    font-size: 3rem;
+    padding: 1rem 3rem;
+  }
+
+  main {
+    height: auto;
+  }
+  .main1 {
+    height: auto;
+    padding: 6rem 4rem;
+  }
+  .main1 h2 {
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+    padding: 4rem 0;
+  }
+  .main1 p {
+    font-size: 3rem;
+    padding: 3rem 8rem;
+  }
+  .main1 a {
+    font-size: 2.5rem;
+    padding: 1.5rem 4rem;
+  }
+
+  /* GRID */
+  .grid-container {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr); /* 4 kolone */
+   grid-template-rows: repeat(2, auto);
+   height: auto;
+   text-align: center;
+
+  }
+  .grid-item{
+    border: none;
+  }
+
+
+  .main2 {
+    height: auto;
+    padding: 6rem 0;
+  }
+  .naslov h2 {
+    font-size: 14rem;
+    letter-spacing: 0.5rem;
+  }
+  .icons {
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  .b {
+    width: 40vw;
+    padding: 5rem 4rem;
+  }
+  .b i {
+    font-size: 15rem;
+  }
+  .b h3 {
+    font-size: 3rem;
+  }
+  .b p {
+    font-size: 2rem;
+  }
+  .main2 h2{
+    font-size: 5rem;
+  }
+
+  footer {
+    height: auto;
+    padding: 5vh 0;
+  }
+  footer h2 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    letter-spacing: 0.5rem;
+  }
+  form {
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    height: auto;
+  }
+  .prijavaprva {
+    width: 100%;
+    height: auto;
+    padding: 3vh 0;
+  }
+  .prijavaprva h3 {
+    font-size: 4rem;
+  }
+  .prijavaprva p {
+    font-size: 3rem;
+  }
+  .prijava {
+    width: 100%;
+    height: auto;
+    padding: 3vh 0;
+  }
+  .prijava h3 {
+    font-size: 4rem;
+  }
+  .in1, .in2 {
+    width: 80%;
+    font-size: 4.5rem;
+    text-align: left;
+  }
+  form button {
+    width: 55%;
+    padding: 3rem;
+    font-size: 6rem;
+  }
+  .kontakt {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3vh;
+  }
+  .y {
+    font-size: 6rem;
+    padding: 1.5rem;
+  }
+  .smernice h4 {
+    font-size: 4rem;
+  }
+  .form{
+    border:0.5rem solid blueviolet;
+  }
+  input::placeholder{
+    font-size:2rem;
+  }
+   form input{
+    font-size: 2rem;
+  }
+    form button{
+    font-size: 3rem;
+    padding: 1rem 3rem;
+  }
+
+
+@media (max-width: 768px) {
+
+  nav{
+    background:none;
+  }
+   .navbar ul {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    background: #0a0a0a;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    display: none; 
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #menu-toggle:checked + .hamburger + ul {
+    display: flex;
+    }
+  nav ul li a {
+    font-size: 5.5rem;
+  }
+  .info h1 {
+    font-size: 6rem;
+    letter-spacing: 1rem;
+  }
+  .info p {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+  }
+  .info a {
+    font-size: 5rem;
+    padding: 1rem 6rem;
+  }
+  .heder a{
+    font-size: 3rem;
+    padding: 2rem 4rem;
+  }
+
+
+  .main1 h2 {
+    font-size: 5rem;
+  }
+  .main1 p {
+    font-size: 2rem;
+    padding: 3rem 4rem;
+  }
+  .main1 a {
+    font-size: 2rem;
+    padding: 1rem 3rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .grid-item {
+    width: 80vw;
+    height: 40vh;
+  }
+  .naslov h2 {
+    font-size: 12rem;
+  }
+  .icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .b {
+    width: 80%;
+    padding: 4rem 3rem;
+  }
+  .b i {
+    font-size: 18rem;
+  }
+  .b h3 {
+    font-size: 3rem;
+  }
+  .b p {
+    font-size: 1.5rem;
+  }
+  .main2 h2{
+    font-size: 5rem;
+  }
+
+  footer h2 {
+    font-size: 4rem;
+    letter-spacing: 0.5rem;
+  }
+  .prijavaprva h3, .prijava h3 {
+    font-size: 4rem;
+  }
+  .prijavaprva p {
+    font-size: 2rem;
+  }
+  .in1, .in2 {
+    width: 90%;
+    font-size: 3.5rem;
+    text-align: left;
+  }
+  form button {
+    width: 65%;
+    font-size:3rem;
+    padding: 2.5rem;
+  }
+  .kontakt {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .y {
+    font-size: 5rem;
+    padding: 1rem;
+  }
+  .smernice h4 {
+    font-size: 3rem;
+  }
+  .form{
+    border:0.5rem solid blueviolet;
+  }
+  input::placeholder{
+    font-size:2rem;
+  }
+    form button{
+      letter-spacing: 0.5rem;
+    font-size: 3rem;
+    padding: 0.5rem 1.5rem;
+  }
+   form{
+    border:0.1rem blueviolet solid;
+  }
+  .in1,.in2{
+    border: 0.1rem blueviolet solid;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  
+  nav{
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+  }
+  nav ul li a {
+    font-size: 5rem;
+  }
+  .info h1 {
+    font-size: 6rem;
+    letter-spacing: 1rem;
+  }
+  .info p {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+  }
+  .info a {
+    font-size: 3rem;
+    padding: 1rem 3rem;
+  }
+   .heder a{
+    font-size: 3rem;
+    padding: 2rem 4rem;
+  }
+  
+  .main1 h2 {
+    font-size: 5rem;
+  }
+  .main1 p {
+    font-size: 2rem;
+    padding: 2rem 2rem;
+  }
+  .main1 a {
+    font-size: 2rem;
+    padding: 1rem 3rem;
+  }
+  .grid-item {
+    width: 90vw;
+    height: 35vh;
+  }
+  .b i {
+    font-size: 15rem;
+  }
+  .b h3 {
+    font-size: 3rem;
+  }
+  .b p {
+    font-size: 1.5rem;
+  }
+  .main2 h2{
+    font-size: 5rem;
+  } 
+  .icons{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* FOOTER */
+  footer h2 {
+    font-size: 5rem;
+  }
+  .prijavaprva h3, .prijava h3 {
+    font-size: 3rem;
+  }
+  .prijavaprva p {
+    font-size: 2rem;
+  }
+  .in1, .in2 {
+    width: 90%;
+    font-size: 3rem;
+    text-align: left;
+  }
+  form button {
+    width: 75%;
+    font-size: 4rem;
+    padding: 2rem;
+  }
+  .kontakt {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .y {
+    font-size: 5rem;
+    padding: 0.8rem;
+  }
+  .smernice h4 {
+    font-size: 2.5rem;
+  }
+  form{
+    border:0.1rem blueviolet solid;
+  }
+  .in1,.in2{
+    border: 0.1rem blueviolet solid;
+  }
+  input::placeholder{
+    font-size:2rem;
+  }
+  form button{
+    font-size: 3rem;
+    padding: 0.5rem 1.5rem;
+  }
+  
+  }
